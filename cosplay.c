@@ -67,7 +67,7 @@ int main(void){
         }
     } //dava pra transformar isso aqui em funçao tb mas acho que ia ser trabalho à toa
 
-    if(testadiatriste(matriz, n, m)){
+    if(testadiatriste(matriz, n, m)){ //mensagem para caso não tenha lugar possivel
         printf("Eh um dia triste para os mono Yasuo\n");
     }else{
         for(int i = 0; i < n; i++){
