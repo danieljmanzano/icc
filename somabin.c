@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//resultado da soma de dois numeros binarios convertendo para decimal
+
 int main(){
     int n, m, vetorn[100], vetorm[100], soma = 0, pot2 = 1, *pontn, *pontm;
     scanf("%d %d", &n, &m);

@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//recebe duas matrizes, ve se sao diagonais e, caso sejam de mesma dimensao, printa o resultado da multiplicacao das duas
+
 void scanEprint(int matriz[6][6], int a){ //le e printa a matriz
     for(int i = 0; i < a; i++){
         for(int j = 0; j < a; j++){
@@ -30,7 +32,7 @@ int testa(int matriz[6][6], int a){
     return verifica; //se chegou aqui quer dizer que a matriz é diagonal e retorna 1 à funçao
 }
 
-void multiplicamatriz(int matrizresult[6][6], int matrizn[6][6], int matrizm[6][6], int n){
+void multiplicamatriz(int matrizresult[6][6], int matrizn[6][6], int matrizm[6][6], int n){ //vou nem falar o que a funçao faz...
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             int soma = 0;

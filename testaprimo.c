@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//testa se um numero é primo do jeito "otimizado"
+
 int main(){
     int vetorzao[1500000], num, q;
 

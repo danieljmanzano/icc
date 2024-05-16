@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//tentar achar o maior e o menor primo presentes dentro de um conjunto de números fornecidos
+
 int main(){
     int a, b, maior = 0, menor;
     scanf("%d%d", &a, &b);

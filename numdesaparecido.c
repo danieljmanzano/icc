@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//recebo uma sequencia de numeros e tenho que procurar o numero que falta 
+//(usa a ideia matematica aqui, a pa do primeiro ao ultimo numero menos a soma dos numeros fornecidos vai ser o numero que falta)
+
 int pa(int n){ //função para calcular a pa de 1 ao número fornecido
     int soma = 0;
     for(int i = 1; i <= n; i++){

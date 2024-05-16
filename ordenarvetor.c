@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//obviamente, ordena um vetor
+
 int main(){
     int n, vetor[100], compara = 0;
     scanf("%d", &n);

@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//jeitos pra calcular a sequencia de fibonacci usando funçao
+//é bem basico, só tava exercitando a materia
+
 long int funcao(long int n){
    long int fib1 = 1, fib2 = 1, fibaux, resp;
 

@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//exercício pra jogar batalha naval, basicamente
+//recebe o campo de jogo, as jogadas e os erros e acertos, além do campo no final com os acertos
+
 void campo(char matriz[26][26], int n){ //lê o "tabuleiro" da batalha naval
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){

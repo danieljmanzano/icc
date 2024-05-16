@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+//verificar se uma palavra é palindromo usando funcao (e ponteiro no meu caso rsrs)
+//meio obvio como funfa entao nao vou explicar os detalhes do codigo em si
+
 int testapalindromo(char *palavra, int cont){
     char *pont;
     int verifica;

@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//recebo a quantidade de linhas e colunas de uma matriz (n = linha = notas de um aluno/ m = colunas = notas de um exercicio especifico)
+//vou printar a media de cada aluno, se foi aprovado ou reprovado e as medias de cada exercicio em ordem decrescente
+
 float medialinha(float matriz[100][25], int a, int m){ //calcula a media de notas na linha (de cada aluno)
     float soma = 0;
     for(int j = 0; j < m; j++){

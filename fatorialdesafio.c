@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    //descobrir quantos zeros tem no resultado de um fatorial
+    //descobrir quantos zeros tem no resultado de um fatorial (do jeito otimizado)
     unsigned int n;
     int cont = 0, cinco = 1;
     scanf("%u", &n);

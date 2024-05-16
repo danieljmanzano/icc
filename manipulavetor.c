@@ -1,5 +1,13 @@
 #include <stdio.h>
 #include <ctype.h>
+
+//enunciado do exercicio: "O comando ’a’deve ordenar seu vetor e imprimi-lo, o comando ’b’ deve imprimir apenas os numeros
+//do vetor que pertencem a sequencia de fibonacci (as entradas nao serao maiores que 2000), o comando
+//c devera imprimir o equivalente de cara numero do vetor como caractere, e depois imprimir o mesmo
+//caractere como maiusculo (ToUpper). Caso seu programa receba qualquer outro comando, deve printar
+//”comando inexistente”. seguidos por uma quebra de linha."
+//dava pra fazer denovo usando funçao mas nao to afim 
+
 int main(){
     int num, vet[100], vetfib[20], compara = 0, nummax, fib1 = 0, fib2 = 1, fibaux;
     char carac;

@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+//recebe uma palavra e ve se ela tem um anagrama que possa ser um palindromo
+
 int main(){
     int n, cont = 0, verifica = 0, alfabeto[26];
     scanf("%d", &n);

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+//talves seja obvio... mas esse é um pograma pa transformar numero inteiro em algarismo romano (limitado até uns tantos mil e pouco)
+
 void inteiropararomano(int n, char alg[13][3], int num[13]){
     int cont = 12;
     while(n > 0){

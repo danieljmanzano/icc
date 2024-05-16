@@ -1,4 +1,9 @@
 #include <stdio.h>
+
+//nem lembro mais como era o enunciado, mas basicamente era pra resolver um exercicio de prova de icc1
+//o codigo nao é meu... tinha feito e tinha ficado paia, ent copiei esse aqui (que deu certo) pra lembrar
+//peço desculpas ao autor de quem eu roubei
+
 int main(){
     long int x = 0, s = -1;
     double S = 0, exp = 1, fat = 1;

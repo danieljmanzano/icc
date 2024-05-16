@@ -50,4 +50,4 @@ int main(){
     }
 }
 //misericordia
-//printar a interseção e a diferença entre dois conjuntos de números
+//printar a interseção e a diferença entre dois conjuntos de números fornecidos

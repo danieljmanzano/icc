@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+
+//printa uma string partindo do meio e indo pros canto
+
 int main(){
     char vetor[100], vetor2[100];
     scanf("%s", vetor);

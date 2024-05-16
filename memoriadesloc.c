@@ -1,4 +1,8 @@
 #include <stdio.h>
+
+//nao entendi ate agora como esse negocio funciona
+//mas ta ai guardado
+
 int main(){
     unsigned short int a, b, c;
     long long int d;
