@@ -17,8 +17,8 @@ void ordena(int *vetor, int n){ //funcao pra ordenar os vetor
     return;
 }
 
-int *le(int n){
-    int *vetor=NULL;
+int *le(int n){ ///funçao pra ler e mandar de volta o vetor que eu quiser trazer pra cá (uso pro vet1 e vet2)
+    int *vetor = NULL;
     vetor = (int *) malloc (sizeof(int) * n);
     for(int i = 0; i < n; i++){
         scanf(" %d", &vetor[i]);
@@ -26,24 +26,24 @@ int *le(int n){
     return vetor;
 }
 
-void printa(int *vetor, int n){
+void printa(int *vetor, int n){ //funçao pra printar as funçoes que eu quiser trazer pra cá (uso pro vet1, vet2, uniao e uniao - interseçao)
     for(int i = 0; i < n; i++){
         printf("%d ", vetor[i]);
     }
     return;
 }
 
-int* intersecao(int *vet1, int *vet2, int n1, int n2, int *cont){ //uso a funçao pra criar a interseçao e contar quantos termos estao nela
+int *intersecao(int *vet1, int *vet2, int n1, int n2, int *cont){ //uso a funçao pra criar a interseçao 
     int *inter = NULL;
 
-    if(!n1 || !n2) return inter;
+    if(!n1 || !n2) return inter; //caso algum conjunto seja vazio, a interseçao volta nula
 
     for(int i = 0; i < n1; i++){
         for(int j = 0; j < n2; j++){
             if(vet1[i] == vet2[j]){
                 (*cont)++;
-                inter = (int*) realloc(inter, (*cont)*sizeof(int));
-                inter[(*cont)-1] = vet1[i];
+                inter = (int*) realloc(inter, (*cont)*sizeof(int)); //esse lance de realocar a cada um que adiciona é ideia do bernardo
+                inter[(*cont)-1] = vet1[i]; //(eu nunca daria conta de fazer isso certo, obg bernas)
                 break;
             }
         }
@@ -51,26 +51,25 @@ int* intersecao(int *vet1, int *vet2, int n1, int n2, int *cont){ //uso a funça
     return inter;
 }
 
-int *uniao(int *vet1, int *vet2, int n1, int n2, int *cont){ //assim como na interseçao, conto quantos tem na uniao
+int *uniao(int *vet1, int *vet2, int n1, int n2, int *cont){ //assim como na interseçao, crio a uniao aqui
     int *un = NULL;
 
-    if(!n1 && !n2){
+    if(!n1 && !n2){ //caso os dois conjuntos sejam vazios, volto com "un" nulo (nao tem nos casos testes, mas se tivesse daria certo ok)
         printf("vazio");
         return un;
     }
 
-    for(int i = 0; i < n1; i++){
+    for(int i = 0; i < n1; i++){ //adiciona na uniao todos os numeros do primeiro vetor
         (*cont)++;
-        un = (int*) realloc(un, (*cont)*sizeof(int));
+        un = (int*) realloc(un, (*cont)*sizeof(int)); //denovo o lance de realocar os que adiciona
         un[(*cont)-1] = vet1[i]; 
     }
 
-    for(int i=0; i<n2; i++){
+    for(int i=0; i<n2; i++){ //agora adiciona os do vetor 2
         int tem=0;
-
         for(int j=0; j<n1; j++) {
-            if(vet1[j] == vet2[i]){
-                tem=1; 
+            if(vet1[j] == vet2[i]){ //verifica se o numero ta dentro do vetor 1
+                tem=1; //se tiver, nao coloco la dentro (usa o "tem" como flag)
                 break;
             }
         }
@@ -82,12 +81,12 @@ int *uniao(int *vet1, int *vet2, int n1, int n2, int *cont){ //assim como na int
     }
     return un;
 }
-int *subtrai(int *un, int *inter, int tamU, int tamI, int *tamSub){
-    int *sub = NULL;
 
-    if(!tamU && !tamI){
-        printf("vazio");
-        return sub;
+int *subtrai(int *un, int *inter, int tamU, int tamI, int *tamSub){ //funcao pra achar o vetor da subtraçao entre a uniao e a interseçao
+    int *sub = NULL; 
+
+    if(!tamU && !tamI){ //se ambos forem vazios printa aqui
+        return sub; //(vou printar vazio na volta daqui pra main)
     }
 
     for(int i = 0; i < tamU; i++){
@@ -108,7 +107,7 @@ int *subtrai(int *un, int *inter, int tamU, int tamI, int *tamSub){
 }
 
 int main(void){
-    int n1=0, n2=0, *vet1=NULL, *vet2=NULL, verifica = 1, vazio = 1;
+    int n1 = 0, n2 = 0, *vet1 = NULL, *vet2 = NULL;
 
     scanf("%d", &n1);
     vet1 = le(n1);
@@ -136,24 +135,30 @@ int main(void){
 
     int tamU = 0;
     int *un = uniao(vet1, vet2, n1, n2, &tamU);
-    ordena(un, tamU);
     printf("\nA uniao B: ");
-    printa(un, tamU);
+    if(un == NULL){
+        printf("vazio");
+    }else{
+        ordena(un, tamU);
+        printa(un, tamU);
+    }
 
     printf("\n(A uniao B) - (A interseccao B): ");
     int tamSub = 0;
     int *sub = subtrai(un, inter, tamU, tamI, &tamSub);
-    if(sub==NULL) printf("vazio");
-    else{
+    if(sub==NULL){
+        printf("vazio"); //caso nao retorne nada la da funcao quer dizer que a subtraçao é vazia
+    }else{
         ordena(sub, tamSub);
-        printa(sub, tamSub);
+        printa(sub, tamSub); //senao, ordeno e printo ela pra acabar
     }
 
     free(un);
     free(inter);
+    free(sub);
     free(vet1);
     free(vet2);
-    un = inter = vet1 = vet2 = NULL; //libera geral pra caba (faz alguma diferença?)
+    sub = un = inter = vet1 = vet2 = NULL; //libera geral pra caba (faz alguma diferença?)
 }
 //aqui no final percebi que o certo é intersecçao mas agora ja é tarde pra mudar, eh nois
-//tinha feito até uma certa parte que tava dando segfault em um caso particular, aí o bernardo refez do jeito certo rsrs
+//tinha feito até uma certa parte que tava dando segfault em um caso particular, aí o bernardo deu uma arrumada geral rsrs
