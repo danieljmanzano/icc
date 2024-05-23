@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+//programa pra um joguinho em que tenho que posicionar peças em um tabuleiro (asterisco numa matriz) de acordo com certas condições
+//as condições são que não haja um X no lugar (pq aí ele ja ta marcado antes) e não tenha uma quantidade impar de X nos vizinhos daquela posição
+//os espaços livres do input são ".", os marcado é "X"
 
 char **alocamatriz(int n, int m){ //funçao pra alocar a matriz de acordo com "n" e "m" fornecidos
     char **pont = NULL;
