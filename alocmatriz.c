@@ -45,4 +45,7 @@ int main(void){
     matriz = alocamatriz(sqrt(n));
     le(matriz, n);
     printa(matriz, n);
+
+    free(matriz);
+    matriz = NULL;
 }
