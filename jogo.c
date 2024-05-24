@@ -75,5 +75,8 @@ int main(void){
     escreve(matriz, n, m); //marco as posições que posso colocar uma peça (o asterisco)
     printa(matriz, n, m); //printo no final depois de marcar as posições
     return 0;
+
+    free(matriz);
+    matriz = NULL;
 }
 //exercicio daorinha
