@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+//exercicio em que recebo nome, cpf, idade, saldo e credito de uma pessoa
+//depois tenho que printar todos os dados certin e mostrar quem ta endividado com base no credito e saldo
+
 typedef struct{
     char *nome, cpf[12]; //cpf pode ser estático pq sempre tem o mesmo tamanho
     int idade;

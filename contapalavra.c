@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
 #include <string.h>
 
 //exercício pra contar a quantidade de vezes que uma certa palavra aparece em um certo arquivo de texto (desconsiderando diferenças em maiusculo ou minusculo)

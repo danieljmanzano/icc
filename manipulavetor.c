@@ -6,7 +6,7 @@
 //c devera imprimir o equivalente de cara numero do vetor como caractere, e depois imprimir o mesmo
 //caractere como maiusculo (ToUpper). Caso seu programa receba qualquer outro comando, deve printar
 //”comando inexistente”. seguidos por uma quebra de linha."
-//dava pra fazer denovo usando funçao mas nao to afim 
+//comentario posterior a quando fiz o codigo : dava pra fazer denovo usando funçao mas nao to afim 
 
 int main(){
     int num, vet[100], vetfib[20], compara = 0, nummax, fib1 = 0, fib2 = 1, fibaux;
