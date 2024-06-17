@@ -14,13 +14,13 @@ int main(){
         desgraca = tamanho / 2;
     }
     for(int i = 0; i <= tamanho; i++){
-            vetor2[i] = vetor[desgraca - 1];
-            if(i % 2 == 0){
-                desgraca += (i + 1);
-            }else{
-                desgraca -= (i + 1);
-            }
+        vetor2[i] = vetor[desgraca - 1];
+        if(i % 2 == 0){
+            desgraca += (i + 1);
+        }else{
+            desgraca -= (i + 1);
         }
+    }
     for(int j = 0; j < tamanho; j++){
         printf("%c", vetor2[j]);
     }
