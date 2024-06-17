@@ -26,13 +26,24 @@ int main(void){
     
     vet = malloc(sizeof(int) * (a + b));
 
-    for(int i = 0; i < 2 * aux2; i++){
-        if(i % 2){
-            vet[i] = vetb[(i - 1)/2];
-        }else{
-            vet[i] = veta[i / 2];
+    if(a > b){ //faço isso pra começar guardando no vetor final sempre o com maior tamanho (sem motivo aparente, só quis que fosse assim)
+        for(int i = 0; i < 2 * aux2; i++){
+            if(i % 2){
+                vet[i] = vetb[(i - 1)/2];
+            }else{
+                vet[i] = veta[i / 2];
+            }
+        }
+    }else{
+        for(int i = 0; i < 2 * aux2; i++){
+            if(i % 2){
+                vet[i] = veta[(i - 1)/2];
+            }else{
+                vet[i] = vetb[i / 2];
+            }
         }
     }
+    
 
     if(a > b){
         for(int i = 2 * aux2; i < 2 * aux; i++){
