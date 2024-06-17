@@ -61,3 +61,4 @@ int main(void){
 }
 
 //os aux e uns breguenaite a mais é pra se os tamanhos dos vetores forem diferentes
+//exercicio de lista, por isso quase nao comentei nada (preguiça, desculpa)
