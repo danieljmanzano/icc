@@ -40,11 +40,16 @@ void soma(fracao n1, fracao n2){
 }
 
 void subt(fracao n1, fracao n2){
-    int aux;
+    int aux, flagneg;
     fracao result;
 
     result.numer = n1.numer * n2.denom - n2.numer * n1.denom;
     result.denom = n1.denom * n2.denom;
+
+    if(result.numer < 0){
+        result.numer *= -1; //deixo o resultado positivo
+        flagneg = 1; //ativo uma flag que indica o resultado como negativo
+    } //caso o resultado seja negativo tenho que dar um jeito aq pra funcionar a logica de baixo
 
     if(result.numer > result.denom) aux = result.denom; //mesma logica da funçao de cima, faço simplificação
     else aux = result.numer;
@@ -65,6 +70,8 @@ void subt(fracao n1, fracao n2){
         printf("0 (subtracao)\n");
         return;
     }
+
+    if(flagneg) printf("-"); //caso seja negativo eu printo o - separado (ja que deixei o numero positivo ali em cima)
 
     printf("%d / %d (subtracao)\n", result.numer, result.denom);
 }
