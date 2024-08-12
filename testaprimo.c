@@ -3,15 +3,15 @@
 //testa se um numero é primo do jeito "otimizado"
 
 int main(){
-    int vetorzao[1500000], num, q;
+    int vetorzao[150000], num, q;
 
-    for(int z = 0; z < 1500000; z++){
+    for(int z = 0; z < 150000; z++){
         vetorzao[z] = 0;  //vetor com todos numeros de 0 a 1500000 marcados com 0
     }
 
-    for(int i = 2; i < 1500000; i++){
+    for(int i = 2; i < 150000; i++){
         if(vetorzao[i] == 0){
-            for(int j = 2; j*i < 1500000; j++){
+            for(int j = 2; j*i < 150000; j++){
                 vetorzao[j*i] = 1;   //todos numeros nao primos sao colocados com valor 1 no vetor nas respectivas posições
             }
         }
@@ -27,3 +27,6 @@ int main(){
         }
     }
 }
+
+//atualizei tirando um zero do numerozaço do vetor ali, tinha rodado no runcodes mas nao rodava aqui
+//agora aqui ta funcionando
